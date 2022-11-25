@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block web_content %}
+<table class="table table-hover">
+    <tr>
+        <td>
+            <img style="width: 400px; height: 400px" src="{{ post.image_url }}" onerror="this.src='https://csp-clients.s3.amazonaws.com/easttexasspa/wp-content/uploads/2021/06/no-image-icon-23485.png'">
+        </td>
+        <td>
+            <ul>
+                {% if post.title %}
+                    <li>Mô tả: {{ post.title }}</li>
+                {% endif %}
+                {% if post.category %}
+                    <li>Danh mục: {{ post.category }}</li>
+                {% endif %}
+                {% if post.detail %}
+                    <li>Chi tiết: {{ post.detail }}</li>
+                {% endif %}
+                {% if post.price %}
+                    <li>Giá: {{ post.price }}.000 VNĐ</li>
+                {% endif %}
+                {% if post.status == 1 %}
+                    <li>Tình trạng: Đã bán</li>
+                {% else %}
+                    <li>Tình trạng: Chưa bán</li>
+                    {% endif %}
+                {% if current_user == post.author %}
+                    <li>
+                        <a href="{{ url_for('main.edit_post', post_id=post.id) }}">Edit post</a>
+                    </li>
+                {% endif %}
+                <li>
+                    <a href="{{ url_for('main.user', id=post.author.id) }}">
+                        <img style="border-radius: 50%;" src="{{ post.author.avatar(20) }}" alt="Avatar" />
+                    </a>
+                    <a href="{{ url_for('main.user', id=post.author.id) }}">
+                        {{ post.author.username }}
+                    </a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {{ moment(post.timestamp).fromNow() }}
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-md-4">
+                    {{ wtf.quick_form(form) }}
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            {% for comment in comments %}
+                <p>{% include "main/_comment.html" %}</p>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+<nav aria-label="...">
+    <ul class="pager">
+        <li class="previous{% if not prev_url %} disabled{% endif %}">
+            <a href="{{ prev_url or '#' }}">
+                <span aria-hidden="true">←</span> Mới hơn
+            </a>
+        </li>
+        <li class="next{% if not next_url %} disabled{% endif %}">
+            <a href="{{ next_url or '#' }}">
+                Cũ hơn <span aria-hidden="true">→</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+{% endblock %}

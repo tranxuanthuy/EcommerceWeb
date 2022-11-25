@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block web_content %}
+    <table>
+        <tr valign="top">
+            <td><img style="border-radius: 50%;" src="{{ user.avatar(175) }}" alt="Avatar"></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <br>
+                <p style="font-size: 100; font-weight: 500; font: bolder;">
+                    <b>{{ user.username }}</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% if user==current_user %}
+                        <a href="{{ url_for('main.edit_profile') }}">Chỉnh sửa hồ sơ</a>
+                    {% elif not current_user.is_authenticated %}
+                        <a href="{{ url_for('main.follow', id=user.id) }}">Theo dõi</a>
+                    {% elif current_user.is_following(user) %}
+                        <a href="{{ url_for('main.unfollow', id=user.id) }}">Bỏ theo dõi</a>
+                    {% else %}
+                        <a href="{{ url_for('main.follow', id=user.id) }}">Theo dõi</a>
+                    {% endif %}
+                </p>
+                <p>
+                    <b>{{ user.posts.count() }}</b> Bài đăng
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ url_for('main.selled', user_id=user.id) }}">
+                        <b>{{ user.posts.filter_by(status = 1).count() }}</b> Đã bán
+                    </a>
+                    <br>
+                    <b>{{ user.followers.count() }}</b> Người theo dõi
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>{{ user.followed.count() }}</b> Đang theo dõi
+                </p>
+                <p>Email: {{ user.email }}</p>
+                {% if user.about_me %}
+                    <p>{{ user.about_me }}</p>
+                {% endif %}
+                {% if user.last_seen %}
+                    <p>Lần HĐ cuối: {{ moment(user.last_seen).format('L') }}</p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    <hr>
+{% for post in posts %}
+    {% include "main/_post.html" %}
+{% endfor %}
+<nav aria-label="...">
+    <ul class="pager">
+        <li class="previous{% if not prev_url %} disabled{% endif %}">
+            <a href="{{ prev_url or '#' }}">
+                <span aria-hidden="true">←</span> Mới hơn
+            </a>
+        </li>
+        <li class="next{% if not next_url %} disabled{% endif %}">
+            <a href="{{ next_url or '#' }}">
+                Cũ hơn <span aria-hidden="true">→</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}

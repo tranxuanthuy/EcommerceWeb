@@ -1,0 +1,28 @@
+<table class="table table-hover">
+    <tr>
+        <td></td>
+        <td>
+            <a href="{{ url_for('main.post_detail', post_id=post.id) }}">
+                <img style="width: 200px; height: 200px" src="{{ post.image_url }}" onerror="this.src='https://csp-clients.s3.amazonaws.com/easttexasspa/wp-content/uploads/2021/06/no-image-icon-23485.png'">
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            {% if post.title %}
+                <p>{{ post.title[0:30] }}</p>
+            {% endif %}
+            {% if post.price %}
+                <p>{{ post.price }} 000 VNĐ</p>
+            {% endif %}
+            <a href="{{ url_for('main.user', id=post.author.id) }}">
+                <img style="border-radius: 50%;" src="{{ post.author.avatar(20) }}" alt="Avatar" />
+            </a>
+            <a href="{{ url_for('main.user', id=post.author.id) }}">
+                {{ post.author.username }}
+            </a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ moment(post.timestamp).fromNow() }}
+        </td>
+    </tr>
+</table>

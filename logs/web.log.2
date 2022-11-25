@@ -1,0 +1,121 @@
+2022-11-24 22:17:00,762 ERROR: Exception on /post_detail/2 [GET] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 131, in post_detail
+    return render_template('main/post_detail.html', title="Post detail", post=post, \
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 49, in block 'content'
+    {% block web_content %}{% endblock %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 24, in block 'web_content'
+    {% if post.status == int(0) %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'int' is undefined
+2022-11-24 22:17:36,966 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 22:17:38,637 ERROR: Exception on /post_detail/2 [GET] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 131, in post_detail
+    return render_template('main/post_detail.html', title="Post detail", post=post, \
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 49, in block 'content'
+    {% block web_content %}{% endblock %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 24, in block 'web_content'
+    {% if post.status == integer(0) %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'integer' is undefined
+2022-11-24 22:18:56,461 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 22:19:21,238 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 22:19:46,437 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 22:23:46,406 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 22:24:09,132 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 22:24:11,457 ERROR: Exception on /post_detail/2 [GET] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 131, in post_detail
+    return render_template('main/post_detail.html', title="Post detail", post=post, \
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 49, in block 'content'
+    {% block web_content %}{% endblock %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 24, in block 'web_content'
+    {% if post.status <= 0.5 %}
+TypeError: '<=' not supported between instances of 'str' and 'float'

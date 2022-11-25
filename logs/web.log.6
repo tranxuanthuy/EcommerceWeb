@@ -1,0 +1,122 @@
+2022-11-22 16:45:37,078 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 16:47:44,958 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 16:49:48,487 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:02:22,149 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:03:23,817 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:04:30,009 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:05:19,476 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:05:32,155 ERROR: Exception on /comment/8 [POST] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: table comment has no column named comment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 133, in comment
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\session.py", line 3444, in flush
+    self._flush(objects)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\session.py", line 3584, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\util\compat.py", line 210, in raise_
+    raise exception
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\session.py", line 3544, in _flush
+    flush_context.execute()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\orm\persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\sql\elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\util\compat.py", line 210, in raise_
+    raise exception
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\sqlalchemy\engine\default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) table comment has no column named comment
+[SQL: INSERT INTO comment (comment, timestamp, post_id, user_id) VALUES (?, ?, ?, ?)]
+[parameters: ('thuy', '2022-11-22 10:05:19.428880', '8', 1)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-11-22 17:06:20,628 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:06:31,890 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 17:06:44,207 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 19:37:01,948 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 19:45:31,901 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 19:47:46,403 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 19:47:50,447 ERROR: Exception on /user/2 [GET] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 70, in user
+    return render_template("main/user.html", user=user, posts=posts.items, \
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 49, in block 'content'
+    {% block web_content %}{% endblock %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\user.html", line 14, in block 'web_content'
+    {% elif current_user.is_following(user) %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'is_following'
+2022-11-22 19:51:14,831 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-22 19:53:44,027 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]

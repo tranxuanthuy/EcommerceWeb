@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block web_content %}
+    {% if posts %}
+        {% for post in posts %}
+            {% include "main/_post.html" %}
+        {% endfor %}
+    {% endif %}
+    <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <a href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">←</span> Mới hơn
+                </a>
+            </li>
+            <li class="next{% if not next_url %} disabled{% endif %}">
+                <a href="{{ next_url or '#' }}">
+                    Cũ hơn <span aria-hidden="true">→</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}

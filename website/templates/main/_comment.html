@@ -1,0 +1,4 @@
+
+
+<p><a href="{{ url_for('main.user', id=comment.author.id) }}"><img style="border-radius: 50%;" src="{{ post.author.avatar(20) }}" alt="Avatar" /> {{ comment.author.username }}</a></p>
+<p>{{ comment.comment }}<br>{{ moment(comment.timestamp).fromNow() }}</p>

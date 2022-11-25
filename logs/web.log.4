@@ -1,0 +1,113 @@
+2022-11-24 17:31:25,095 ERROR: Exception on /post_detail/3 [POST] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 123, in post_detail
+    c = Comment(comment=form.comment.data, post_id=post_id, user_id=current_user.id)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'id'
+2022-11-24 17:33:09,913 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 17:33:14,734 ERROR: Exception on /post_detail/8 [POST] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 123, in post_detail
+    return redirect(url_for('main.login'))
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.login'. Did you mean 'main.index' instead?
+2022-11-24 17:33:32,642 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 17:50:23,456 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 17:53:32,319 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 19:50:22,521 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 19:51:21,044 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 19:54:58,820 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 20:06:56,961 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 21:03:05,653 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 21:06:32,583 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 21:32:51,041 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 21:33:20,884 ERROR: Exception on /post_detail/1 [GET] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 131, in post_detail
+    return render_template('main/post_detail.html', title="Post detail", post=post, \
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\base.html", line 49, in block 'content'
+    {% block web_content %}{% endblock %}
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\templates\main\post_detail.html", line 26, in block 'web_content'
+    <a href="{{ url_for('main.edit_post') }}">Edit post</a>
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.edit_post'. Did you forget to specify values ['post_id']?
+2022-11-24 21:34:06,982 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 21:36:53,594 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-24 21:37:04,490 ERROR: Exception on /edit_post/2 [POST] [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\main\routes.py", line 152, in edit_post
+    return redirect(url_for('post_detail', post_id=post.id))
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "D:\TranXuanThuy\Project\ChiaSeDoCuWeb\web_env\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'post_detail' with values ['post_id']. Did you mean 'main.post_detail' instead?
