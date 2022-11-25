@@ -89,3 +89,4 @@ jinja2.exceptions.UndefinedError: 'post' is undefined
 2022-11-25 07:52:21,076 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
 2022-11-25 11:18:33,997 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
 2022-11-25 11:18:34,964 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
+2022-11-25 11:40:37,269 INFO: Website startup [in D:\TranXuanThuy\Project\ChiaSeDoCuWeb\website\__init__.py:67]
